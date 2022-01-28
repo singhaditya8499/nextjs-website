@@ -2,8 +2,10 @@ import { css } from '@emotion/react';
 
 const global = css `
 :root {
-  --page-background: #222;
-  --page-text: #ddd;
+  --page-background: rgb(240, 240, 240);
+  --page-text: rgb(40, 40, 40);
+  --page-width: 800px;
+  --color-links: rgb(240, 64, 10);
 }
 
 html,

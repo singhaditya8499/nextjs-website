@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 const container = css `
-    min-height: 100vh;
+    min-height: 40vh;
     padding: 1rem 0;
     display: grid;
     place-items: center;
