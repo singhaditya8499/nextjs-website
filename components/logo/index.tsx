@@ -1,22 +1,23 @@
 import { css } from '@emotion/react';
-import { IoMdPlanet as Saturn } from 'react-icons/io';
+import { FaLaptopCode as Laptop } from 'react-icons/fa';
 
-const saturnStyles = css`
+const laptopStyles = css`
 position: relative;
 top: 0.2em;
-margin-left: -0.75rem;
-margin-right: -0.5rem;
+margin-left: 0.75rem;
 `
 const logoStyles = css`
-font-size: 7rem;
+font-size: 3rem;
 display: block;
-text-align: center;
+text-align: left;
+margin-left: 0.75rem;
+margin-top: 0.3rem;
 font-variant: small-caps;
+color: rgb(105,105,105);
 `
 const Logo = () => (
     <span css={logoStyles}>
-        devl
-        <Saturn css={saturnStyles}/>g
+        ADITYA SINGH
     </span>
 )
 
