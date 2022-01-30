@@ -4,7 +4,7 @@ const Header  = () => {
         return (
       <header css={container}>
         <h1 css={title}>
-          <Logo/>
+          {/* <Logo/> */}
         </h1>
         
     </header>

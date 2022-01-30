@@ -17,7 +17,7 @@ color: rgb(105,105,105);
 `
 const Logo = () => (
     <span css={logoStyles}>
-        ADITYA SINGH
+        {/* ADITYA SINGH */}
     </span>
 )
 
