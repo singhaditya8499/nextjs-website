@@ -10,6 +10,7 @@ type PageProps = {
 }
 const Page = ({ children }: PageProps) => {
   const currentURL = useRouter()
+  console.log(children);
   return(
     <>
       <Head>
