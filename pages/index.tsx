@@ -6,7 +6,6 @@ import { getPosts } from 'shared/get-posts';
 export default function Home({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log("Posts are: {}", posts);
   return (
     <Page>
       <ul>

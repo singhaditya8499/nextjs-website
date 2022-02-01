@@ -6,7 +6,7 @@ export default function Post({
     mdxContent,
     frontmatter
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-    return <MDXRemote {...mdxContent} lazy/>
+    return <MDXRemote {...mdxContent} />
 }
 
 export const getStaticProps = async ({params}: GetStaticPropsContext) => {
