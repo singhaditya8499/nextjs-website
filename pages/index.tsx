@@ -1,11 +1,12 @@
 import Page from '@layouts/page';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
-import { getPosts } from 'shared/get-posts';
+import { getPosts, Post } from 'shared/get-posts';
 
 export default function Home({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log("Posts are: ", posts);
   return (
     <Page>
       <ul>
@@ -32,7 +33,7 @@ export const getStaticProps: GetStaticProps = async() => {
   }))
   return {
     props: {
-      posts: allMdx,
+      posts: allMdx as Post[],
     }
   }
 }

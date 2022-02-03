@@ -22,6 +22,11 @@ export type FormatedPost = {
     mdx: MDXRemoteSerializeResult
 }
 
+export type Post = {
+    slug: string,
+    frontmatter: object
+}
+
 const getDirData = (source: string): PostFile[] => 
 readdirSync(source).map((name) => ({
     filePath: `${source}/${name}`,
