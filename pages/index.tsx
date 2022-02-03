@@ -6,7 +6,6 @@ import { getPosts, Post } from 'shared/get-posts';
 export default function Home({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log("Posts are: ", posts);
   const allPosts = posts as Post[];
   return (
     <Page>

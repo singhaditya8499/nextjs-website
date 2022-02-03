@@ -6,6 +6,7 @@ const global = css `
   --page-text: rgb(40, 40, 40);
   --page-width: 800px;
   --color-links: rgb(240, 64, 10);
+  --blog-font-family: "Wotfard",Futura,-apple-system,sans-serif;
 }
 
 html,
