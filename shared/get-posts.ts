@@ -28,6 +28,7 @@ readdirSync(source).map((name) => ({
 }))
 
 const formatPostList = async ({ filePath, slug}: PostFile) => {
+    console.log("Hello world", filePath, slug);
     const mdxSource = await fs.readFile(filePath);
     const { content, data: frontmatter} = matter(mdxSource);
     const mdx = await serialize(content);
