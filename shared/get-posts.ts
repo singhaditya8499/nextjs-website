@@ -2,6 +2,7 @@ import { promises as fs, readdirSync } from 'fs';
 import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
 import matter from 'gray-matter';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 type PostFile = {
     filePath: string
@@ -18,7 +19,7 @@ export type FormatedPost = {
     slug: string,
     content: string,
     frontmatter: FrontMatter,
-    mdx: object
+    mdx: MDXRemoteSerializeResult
 }
 
 const getDirData = (source: string): PostFile[] => 
