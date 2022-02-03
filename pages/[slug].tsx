@@ -12,9 +12,6 @@ export default function Post({
 export const getStaticProps = async ({params}: GetStaticPropsContext) => {
     const { slug: routeSlug } = params as {slug: string}
     const posts = await getPosts('./posts');
-    console.log("Posts are: ", posts[0].mdx.compiledSource);
-
-    console.log("Params: ", params);
     const {mdx, frontmatter} = posts.find(
         ({slug: postSlug}) => postSlug === routeSlug
     ) as FormatedPost

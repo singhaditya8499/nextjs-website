@@ -7,11 +7,12 @@ export default function Home({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   console.log("Posts are: ", posts);
+  const allPosts = posts as Post[];
   return (
     <Page>
       <ul>
         {
-          posts.map((post) => (
+          allPosts.map((post) => (
             <li key={post.slug}>
               <Link href={`/${post.slug}`}>
                 <a>{post.frontmatter.title}</a>

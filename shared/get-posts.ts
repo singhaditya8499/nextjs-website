@@ -22,9 +22,9 @@ export type FormatedPost = {
     mdx: MDXRemoteSerializeResult
 }
 
-export type Post = {
+export interface Post {
     slug: string,
-    frontmatter: object
+    frontmatter: FrontMatter
 }
 
 const getDirData = (source: string): PostFile[] => 
@@ -34,7 +34,6 @@ readdirSync(source).map((name) => ({
 }))
 
 const formatPostList = async ({ filePath, slug}: PostFile) => {
-    console.log("Hello world", filePath, slug);
     const mdxSource = await fs.readFile(filePath);
     const { content, data: frontmatter} = matter(mdxSource);
     const mdx = await serialize(content);
