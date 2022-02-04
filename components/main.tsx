@@ -54,7 +54,7 @@ export default function Main() {
         <>
         <div css={mainPageCss}>
             <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
-            <img src="profile.png" alt="Girl in a jacket" width="240" height="230"></img> 
+            <img src="profile.png" alt="profile" width="240" height="230"></img> 
             <h1 >
                 <Typewriter
                 onInit={(typewriter) => {

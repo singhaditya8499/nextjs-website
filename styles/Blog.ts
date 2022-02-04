@@ -1,13 +1,14 @@
 import { css } from "@emotion/react";
 
 export const blogCss = css `
-    max-width: 675px;
+    max-width: 810px;
     margin: auto;
-    font-family: var(--blog-font-family);
+    font-family: Bogart,Recoleta,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: calc(1.1875rem);
     -webkit-font-smoothing: antialiased;
     line-height: calc(1em + 0.725rem);
     text-align: justify;
+    letter-spacing: -0.05rem;
 
     .image {
         text-align: center;
