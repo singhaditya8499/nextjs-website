@@ -11,7 +11,8 @@ type PostFile = {
 
 type FrontMatter = {
     date: string,
-    title: string
+    title: string,
+    description: string
 }
 
 export type FormatedPost = {

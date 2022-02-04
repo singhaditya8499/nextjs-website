@@ -2,16 +2,19 @@ import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "
 import { FormatedPost, getPosts } from "shared/get-posts"
 import { MDXRemote } from 'next-mdx-remote';
 import { blogCss } from "@styles/Blog";
+import Page from "@layouts/page";
 
 export default function Post({
     mdxContent,
     frontmatter
 }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
-    <div css={blogCss}>
-        <h1>{frontmatter.title}</h1>
-        <MDXRemote compiledSource={mdxContent.compiledSource} />
-    </div>
+    <Page>
+        <div css={blogCss}>
+            <h1>{frontmatter.title}</h1>
+            <MDXRemote compiledSource={mdxContent.compiledSource} />
+        </div>
+    </Page>
     );
 }
 

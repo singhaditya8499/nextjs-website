@@ -16,7 +16,7 @@ const Page = ({ children }: PageProps) => {
         <title>Aditya Singh</title>
       </Head>
       <main>
-        {(currentURL.pathname !== "/") ? <Header /> : <Main/>}
+        {(currentURL.pathname !== "/") ? <Header/> : <Main/>}
         {/* <Navigation/> */}
         {children}
       </main>

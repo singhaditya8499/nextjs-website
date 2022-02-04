@@ -2,12 +2,22 @@ import Logo from '@components/logo';
 import { container, title } from './styles';
 const Header  = () => {
         return (
-      <header css={container}>
-        <h1 css={title}>
-          {/* <Logo/> */}
-        </h1>
-        
-    </header>
+        <header css={container}>
+          <div>
+            <a className="name" href="/">
+              ADITYA SINGH
+            </a> 
+            <a href="/">
+              Home
+            </a>
+            <a href="/blog">
+              Blog
+            </a>
+            <a href="/about">
+              About
+            </a>
+          </div> 
+        </header>
         
 )}
 

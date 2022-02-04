@@ -1,8 +1,5 @@
 import { css } from '@emotion/react';
 import Typewriter from 'typewriter-effect';
-import Image from 'next/image';
-import { profileLinks } from '../public/profileData';
-import { FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 const mainPageCss = css `
   h1,h2 {
@@ -42,6 +39,14 @@ const navigationLinksCss = css `
         display: fixed;
         color: rgb(0,0,0);
     }
+`
+const keybaseCss = css `
+    color: #c1d2e1; 
+    text-align: center;
+    font-family: monospace; 
+    font-style: normal; 
+    text-decoration: none; 
+    font-size: 1rem;
 `
 
 export default function Main() {
@@ -102,6 +107,9 @@ export default function Main() {
                 >
                     <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-mail-mail-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-22.png" width="64" height="64"/>
                 </a>
+            </div>
+            <div css={keybaseCss}>
+                <a href="https://keybase.io/singhaditya" target="_blank" rel="noopener noreferrer">9760 A7F9 636D 15F9</a>
             </div>
             <div css={navigationLinksCss}>
                 <Link href="/about">
