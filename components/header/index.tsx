@@ -1,5 +1,5 @@
-import Logo from '@components/logo';
-import { container, title } from './styles';
+
+import { container } from './styles';
 const Header  = () => {
         return (
         <header css={container}>
