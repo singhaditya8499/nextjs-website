@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/singhaditya
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://adityas.xyz
+  * I am singhaditya (https://keybase.io/singhaditya) on keybase.
+  * I have a public key with fingerprint 80E0 3B9F C681 5A92 B06E  8B0F 9760 A7F9 636D 15F9
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01017a82f5a042b9054da170212d67f796a1f735f76a2ac3d98002a987a35558baba0a",
+      "fingerprint": "80e03b9fc6815a92b06e8b0f9760a7f9636d15f9",
+      "host": "keybase.io",
+      "key_id": "9760a7f9636d15f9",
+      "kid": "01017a82f5a042b9054da170212d67f796a1f735f76a2ac3d98002a987a35558baba0a",
+      "uid": "61167cd40c166d50a646a2bfe504a319",
+      "username": "singhaditya"
+    },
+    "service": {
+      "hostname": "adityas.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1643994140,
+  "expire_in": 157680000,
+  "prev": "7f319e4a7e784c2d7f9c3b0eef40cfa14d82f03352f778b4c7c88441781c1f87",
+  "seqno": 12,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMImAnicrVJdSBRRGF0zQxcKTU1BERstQle5d/7uzD4olqEmivtQpEjLnZk7Omm7
+286suf4QBJFSkWmUfxkRlGZtmb7UQ2oZBEIEZvZQIdRTEBUSZqB1x+ytx54u3/3O
+Od85H9/M1miHM2of31p1a+TUz6jZ6f6QA6/Wprcyil8LM+5WpoGsP6RRI6blbTA0
+xs0ACCDCEqsLGPCsIgOB1zBEgIWsJiIdySKGOuIEHYmYxSqnyRIALJYlhDlBECQF
+KxhgxsXohq+OBANBw2dRWQkQwCmyrooSFLDMKkAkkgJ0GYkAI10WOVGDgi5TYr3f
+tBnUnIJNkm/46R8tvOv2/oH/z75D63IihCJSNR6oUBQ1AWCRpzxFJwLgMQftuSGT
+BH34GKFok2atx5phhTHT7mJoo8lQib1bO8wG6E/fzG8Ot1B2IOi3/Kq/kTbqLStg
+um2iFQ7YyBNE8W5oeBXDp1F1ymgiQdPw+xg3pEjVMmxRKPKcLPOQBy6GNAeMIPEa
+NkJAIo0HgD2HNFFJpFPThMeIIIlXWY2uUOUUQIhOI+oY8hpdHeA4gdURkhReRaok
+8TxEElShLiHGTnXc56faLPWJ69ZT1/mwFQoSpv3JVO1mR5TTsSVmk31iDmdc/N/D
+W1mOddwQTo4V3ztaOu9mE7NbduZ6irLEu6N3Lhas3L481dCvJS2tzZkD3a6b54Z3
+7Vme39GWmpDUXfl8NOFIW+RFV1VnWcVQStfu1Ilt259dcFz9NtA8tepe3r+6fbx8
+KLVk+G3105q+5Mlrl16m7K0p/hHNXT/zxYwrHJwok78einxc9p2NK/yctVi9sBDp
+di1lTL7PCFtqR5h8ys301HOHszO8ZXn3Mw92xqSFPsxd4UNpvyrqyl9x59OdseMP
+H3VGCvLivztPv85JLV3rGFGzPYtpCcLcg9G+1px3YzMeWBnTnTztedPDFuXNPq6K
+JE72BoZxG3ZEvE0LbQd6BudKen8DPB84Ow==
+=zAG7
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/singhaditya
+
+==================================================================
