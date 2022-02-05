@@ -13,6 +13,7 @@ const Page = ({ children }: PageProps) => {
   return(
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <title>Aditya Singh</title>
       </Head>
       <main>

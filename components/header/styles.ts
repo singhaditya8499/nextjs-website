@@ -4,7 +4,7 @@ const container = css `
     background: #dbf0f9;
     position: sticky;
     top: 0px;
-    height: 60px;
+    width: 100%;
     padding: 20px;
 
     a {
@@ -19,6 +19,7 @@ const container = css `
 
     a.name {
       color: black;
+      display: contents;
     }
   `
 

@@ -28,6 +28,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
 `
 
 export { global }
