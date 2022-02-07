@@ -20,7 +20,7 @@ a {
 `
 
 export const paraStyle = css `
-max-width: 810px;
+max-width: 780px;
 margin: auto;
 font-family: Bogart,Recoleta,Helvetica Neue,Helvetica,Arial,sans-serif;
 font-size: calc(1.1875rem);
@@ -29,4 +29,19 @@ line-height: calc(1em + 0.725rem);
 text-align: justify;
 letter-spacing: -0.05rem;
 padding: 2rem 0;
+
+.quote {
+  text-align: center;
+  font-weight: 600;
+}
+.whoSaid {
+  text-align: right;
+  font-weight: 400;
+  font-size: initial;
+}
+
+img {
+  padding: 2ch 0;
+  max-width: 100%;
+}
 `

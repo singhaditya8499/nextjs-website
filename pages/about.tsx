@@ -1,3 +1,4 @@
+import About from '@components/about/about';
 import Page from '@layouts/page';
 import { aboutStyle, paraStyle } from '@styles/About';
 const about = () => (
@@ -16,11 +17,11 @@ const about = () => (
                 <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/000000/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-filled-tal-revivo.png"/>
             </a>
             <a href="https://www.hackerearth.com/@white_whale">
-                <img src="https://brandeps.com/icon-download/H/Hackerearth-icon-vector-01.svg" width="24px"/>
+                <img src="hackerearth_logo.png" width="24px"/>
             </a>
         </div>
         <p css={paraStyle}>
-            Hello my name is Aditya Singh.
+            <About/>
         </p>
     </Page>
 )
