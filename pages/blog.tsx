@@ -1,3 +1,4 @@
+import SideBar from "@components/sidebar";
 import Page from "@layouts/page";
 import { blogListCss } from "@styles/BlogList";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
@@ -10,6 +11,7 @@ export default function Blog({
   const allPosts = posts as Post[];
     return (
       <Page>
+        <SideBar/>
           <ul css={blogListCss}>
           {
             allPosts.map((post) => (
@@ -18,6 +20,7 @@ export default function Blog({
                   <a>
                     {post.frontmatter.title}
                     <p>{post.frontmatter.description}</p>
+                    <img src={post.frontmatter.image} alt="image" width="100%" max-width="inherit"/>
                   </a>
                 </Link>
               </li>
