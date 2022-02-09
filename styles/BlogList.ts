@@ -20,6 +20,9 @@ const blogListCss = css `
         font-size: x-large;
         cursor: pointer;
     }
+    li:hover {
+        background: #ffe5b4;
+    }
 
     p {
         font-weight: 100;
