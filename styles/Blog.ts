@@ -16,7 +16,7 @@ export const blogCss = css `
     }
 
     img {
-        width: 70%;
+        max-width: 50%;
     }
 
     h1 {
@@ -38,5 +38,9 @@ export const blogCss = css `
         left: 0;
         width: 100%;
         height: 100%;
+      }
+      code {
+        color: darkviolet;
+        
       }
 `

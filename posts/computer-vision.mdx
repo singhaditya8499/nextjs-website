@@ -1,0 +1,210 @@
+---
+title: Computer Vision - Introduction
+date: '2022-02-09'
+description: "I learnt about CV while interning at Successive Softwares. It was a small startup but they
+ gave me the oppurtunity to explore the field using Raspberry Pi. It was one of the most memorable two months of my life. 
+ This post shares all the things which I leaned in those two months. Will share the experience in some other post."
+image: "./blogImage/CVexp.png"
+---
+
+# Computer Vision
+
+Computer vision is a field of artificial intelligence (AI) that **enables computers and systems to derive meaningful information from digital images, videos** and other visual inputs — and take actions or make recommendations based on that information. The main aim is to make system understand the surrounding like a human would do and perfome some operations.
+
+# Computer Vision Application
+
+1. Facial Recognition
+2. AR systems
+3. UAVs
+4. Self driving cars
+5. Gesture Control Recognition
+
+# Image representation
+
+Everything in our surrounding is in 3D. Initially we process our surrounding as 2D, our brain inserts depth into it, flips the image, etc. Computer also functions in the similar way. It takes input an image matrix (computer understands arrays only !!).
+
+We generally works on grayscale image when it comes to CV. Colors add extra layer of complexity. 
+
+Lets look at an image:
+
+<><div className="image"><img src="./blogImage/cv/colorApple.png" alt="Color apple"/></div></>
+
+In this image every pixel is represented as with 3 values RGB, where every value ranges from 0-255. Lets convert this to grayscale:
+
+<><div className="image"><img src="./blogImage/cv/bwApple.png" alt="B&W apple"/></div></>
+
+When converted to grayscale, every pixel only have one value which ranges from 0-255. This makes performing mathematical operations easier. Since this is an array, we can actually access every pixel value like we do in a 2D array. Array is numpy, so the method of accessing will be different.
+
+There are some CV tasks which most certainly requires colors. For example differentiating between a green and a yellow leaf. You can judge when to use which type of image by thinking whether a human need a color image for a task or not.
+
+## Color spaces
+
+RGB is not the only representation which is used in computer vision. The other famous ones are HSV (Hue, Saturation, Value), HLS (Hue, Lightness, Saturation)
+
+# Generic CV flow
+
+### Input data
+
+Input can be a video or image or just a numpy array.
+
+### Pre-Processing
+
+We have to perform some pre processing so that CV algorithms can be applied to input data. Pre processing can be anything like converting image to grayscale, blurring, smoothing, noise correction, scaling, etc.
+
+### Selecting areas of interest
+
+Find information in the pre processed input data. Area of interest can be faces, background removal, cropping, etc.
+
+### Feature extraction
+
+Extract specific features from the selected area of interest like facial markers, lines, points, etc.
+
+### Prediction/Recognition
+
+Use the extracted feature to predict something or recognise.
+
+### Perform actions
+
+Based on your prediction/recognition you can perform some actions. Like unlocking phone, play songs according to mood, etc.
+
+# Key CV operations
+
+## Thresholding
+
+This operation is used to filter out some pixels based on their values. Thresholding is used in blue/green screen.
+
+### Initial image
+
+<><div className="image"><img src="./blogImage/cv/greenScreenApple.png" alt="Color apple"/></div></>
+
+### Mask image
+
+In layman terms masking means converting every pixel in a range to white and every other pixel to black.
+
+<><div className="image"><img src="./blogImage/cv/maskApple.png" alt="Color apple"/></div></>
+
+### Use mask to remove the green background
+
+<><div className="image"><img src="./blogImage/cv/maskApple2.png" alt="Color apple"/></div></>
+
+We will use a different image which we can use over the earlier present green backgound. For this example I will be using a batman image. The only difference is we will use mask to keep the background. Let us directly see the final result.
+
+### Final result
+
+<><div className="image"><img src="./blogImage/cv/pasteApple.png" alt="Color apple"/></div></>
+
+## Blurring
+
+Blurring the image. Merging pixels.
+
+## Smoothing
+
+Similar to blurring.
+
+# Code snippets
+
+### Load Image
+
+```python
+import cv2 as cv
+
+img = cv.imread("Profile1.jpg")  # load image
+print(img)  # prints image array
+cv.imshow("Image", img)  # displays image
+cv.waitKey(delay=5000)  # Prevents window from closing
+cv.destroyAllWindows()  # Forcefully destroys all the windows
+```
+
+### Write Image
+
+```python
+import cv2 as cv
+
+img = cv.imread("Profile1.jpg", flags=0)
+cv.imwrite("New-Image.jpg", img)    # Write the image
+```
+
+### Read Video
+
+```python
+import cv2 as cv
+
+cap = cv.VideoCapture(1)    # Capture video stream, 
+														# change the parameter to find different sources
+
+while True:
+    ret, frame = cap.read()     # Read each frame
+    cv.imshow("Video", frame)
+
+    if cv.waitKey(1) & 0xFF == ord("e"):
+        break
+
+cap.release()
+cv.destroyAllWindows()
+```
+
+Video is nothing just multiple image frames arranged in order. You can perform any operation on each frame and it would work just fine!
+
+```python
+import cv2 as cv
+
+cap = cv.VideoCapture(1)  
+
+while(cap.isOpened()):
+    ret, frame = cap.read()     # Read each frame
+    gray_frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # 
+    cv.imshow("Video", gray_frame)
+
+    if cv.waitKey(1) & 0xFF == ord("e"):
+        break
+
+cap.release()
+cv.destroyAllWindows()
+```
+
+## Write Video
+
+```python
+import cv2 as cv
+
+cap = cv.VideoCapture(1)
+FourCC = cv.VideoWriter_fourcc(*"XVID") # Define the video format
+
+result = cv.VideoWriter("Output_Video.avi", 
+                        FourCC, 20.0, (int(cap.get(3)), int(cap.get(4))))
+# Create a variable to store frames
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if ret:
+        result.write(frame)
+        cv.imshow("Video", frame)
+        if cv.waitKey(1) & 0xFF == ord("e"):
+            break
+cap.release()
+result.release()
+cv.destroyAllWindows()
+```
+
+## Detect Faces
+
+```python
+import cv2 as cv
+
+face_classifier = cv.CascadeClassifier("haarcascade_frontalface_default.xml")
+# Load the classifer
+img = cv.imread("Profile1.jpg")
+gray_image = cv.cvtColor(img, cv.COLOR_BGR2GRAY) # Convert image to grayscale
+
+face_detect = face_classifier.detectMultiScale(gray_image, 1.1, 4)
+# Change parameters to fine tune the result
+
+for (x, y, w, h) in face_detect:
+    cv.rectangle(img, (x,y), (x+w, y+h), 
+                 (255, 0, 0), thickness=5) # Draw rectangle
+
+cv.imshow("Image", img)
+
+cv.waitKey(0)
+cv.destroyAllWindows()
+```
