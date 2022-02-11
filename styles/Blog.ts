@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
 export const blogCss = css `
-    max-width: 80%;
+    max-width: 75%;
     margin: auto;
     font-family: Bogart,Recoleta,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: calc(1.1875rem);
